@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Env / secrets
+.env
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Uploads (runtime data)
+backend/uploads/
+uploads/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

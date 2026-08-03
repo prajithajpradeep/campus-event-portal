@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="840" height="470" fill="#f6f6fb"/>
+  <text x="32" y="44" font-size="22" font-weight="700" fill="#1b1b2f">Campus Event Portal — Architecture</text>
+  <text x="32" y="68" font-size="13" fill="#6b7280">One command (docker compose up) runs three containers. Nginx serves the app and proxies API calls.</text>
+
+  <!-- Docker Compose boundary -->
+  <rect x="30" y="92" width="780" height="352" rx="14" fill="none" stroke="#c7c7d9" stroke-dasharray="6 5"/>
+  <text x="46" y="114" font-size="12" font-weight="600" fill="#8b8ba7">DOCKER COMPOSE</text>
+
+  <!-- Browser -->
+  <rect x="60" y="150" width="180" height="90" rx="12" fill="#ffffff" stroke="#e6e6ef"/>
+  <text x="150" y="188" font-size="16" font-weight="700" fill="#1b1b2f" text-anchor="middle">Browser</text>
+  <text x="150" y="210" font-size="12" fill="#6b7280" text-anchor="middle">student &amp; admin</text>
+  <text x="150" y="226" font-size="12" fill="#6b7280" text-anchor="middle">http://localhost</text>
+
+  <!-- Frontend container -->
+  <rect x="300" y="140" width="200" height="110" rx="12" fill="#e6fffa" stroke="#5eead4"/>
+  <text x="400" y="176" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle">Frontend</text>
+  <text x="400" y="197" font-size="12" fill="#0f766e" text-anchor="middle">Nginx :80 + React (SPA)</text>
+  <text x="400" y="215" font-size="11" fill="#14b8a6" text-anchor="middle">serves site,</text>
+  <text x="400" y="230" font-size="11" fill="#14b8a6" text-anchor="middle">proxies /api &amp; /uploads</text>
+
+  <!-- Backend container -->
+  <rect x="560" y="140" width="200" height="110" rx="12" fill="#eef2ff" stroke="#a5b4fc"/>
+  <text x="660" y="176" font-size="15" font-weight="700" fill="#4338ca" text-anchor="middle">Backend</text>
+  <text x="660" y="197" font-size="12" fill="#4338ca" text-anchor="middle">FastAPI :8000</text>
+  <text x="660" y="215" font-size="11" fill="#6366f1" text-anchor="middle">REST API, JWT auth,</text>
+  <text x="660" y="230" font-size="11" fill="#6366f1" text-anchor="middle">roles &amp; validation</text>
+
+  <!-- Database container -->
+  <rect x="560" y="320" width="200" height="90" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="660" y="356" font-size="15" font-weight="700" fill="#334155" text-anchor="middle">PostgreSQL</text>
+  <text x="660" y="378" font-size="12" fill="#475569" text-anchor="middle">:5432 · relational data</text>
+  <text x="660" y="394" font-size="11" fill="#64748b" text-anchor="middle">users, events, registrations</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#6b7280" stroke-width="1.6"/>
+    </marker>
+  </defs>
+  <line x1="240" y1="195" x2="298" y2="195" stroke="#6b7280" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="500" y1="195" x2="558" y2="195" stroke="#6b7280" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="660" y1="250" x2="660" y2="318" stroke="#6b7280" stroke-width="1.6" marker-end="url(#ah)"/>
+
+  <text x="269" y="185" font-size="10" fill="#8b8ba7" text-anchor="middle">HTTP</text>
+  <text x="529" y="185" font-size="10" fill="#8b8ba7" text-anchor="middle">/api</text>
+  <text x="700" y="290" font-size="10" fill="#8b8ba7" text-anchor="middle">SQL</text>
+</svg>
