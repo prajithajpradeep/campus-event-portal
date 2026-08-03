@@ -5,7 +5,7 @@ and admins manage events, participants, and announcements.
 
 ## Architecture
 
-![Architecture](docs/architecture.svg)
+![Architecture](docs/architecture.png)
 
 The whole app runs as three containers. The frontend's Nginx serves the React
 site and reverse-proxies `/api` and `/uploads` to the backend, so the browser
