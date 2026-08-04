@@ -88,7 +88,6 @@ Set in `docker-compose.yml` (or a `.env` file — see `backend/.env.example`):
 campus-event-portal/
 ├── docker-compose.yml       # runs frontend + backend + db together
 ├── docs/architecture.svg    # system design diagram
-├── BUILD_GUIDE.md           # beginner, step-by-step build guide
 ├── backend/                 # FastAPI app + tests + Dockerfile
 │   └── app/  (models, schemas, core, services, routers, main.py)
 └── frontend/                # React app + Nginx + Dockerfile
