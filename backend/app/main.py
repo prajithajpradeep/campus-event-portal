@@ -27,8 +27,7 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Startup: make sure the uploads folder exists, create tables (dev 
-    convenience — Alembic migrations are the production path), seed admin."""
+    """Startup: make sure the uploads folder exists, create tables, seed admin."""
     os.makedirs(settings.upload_dir, exist_ok=True)
     Base.metadata.create_all(bind=engine)
     seed_admin()

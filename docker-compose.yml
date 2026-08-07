@@ -1,6 +1,6 @@
 # Runs the WHOLE application with one command:  docker compose up --build
 # Three separate containers: frontend (Nginx + React), backend (FastAPI), db (PostgreSQL).
-# The frontend's Nginx also acts as a reverse proxy (bonus): it serves the site
+# The frontend's Nginx also acts as a reverse proxy: it serves the site
 # and forwards /api + /uploads to the backend, so the browser only talks to one origin.
 
 services:
@@ -36,7 +36,7 @@ services:
         condition: service_healthy
     volumes:
       - uploads:/app/uploads
-    # Exposed so you can still open Swagger directly at localhost:8000/api/docs
+    # We can open Swagger directly at localhost:8000/api/docs
     ports:
       - "8000:8000"
 
@@ -44,7 +44,7 @@ services:
     build: ./frontend
     depends_on:
       - backend
-    # The whole app is served here — open http://localhost
+    # The whole app is served here — http://localhost
     ports:
       - "80:80"
 
